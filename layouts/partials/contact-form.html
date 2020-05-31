@@ -1,0 +1,36 @@
+<section class="contact-form">
+  {{ $headless := .Site.GetPage "/headless_data" }}
+  {{ $reusablePages := $headless.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "contact-form.md" ) }}
+
+  <div class="container">
+    <h2>{{ $reusablePages.Params.title }}</h2>
+    <form action="https://formspree.io/mvowapzr" method="POST">
+      <div class="row">
+        <div class="col-md-6 form-left">
+          <label for="name">
+            {{ $reusablePages.Params.name }}
+          </label>
+          <input id="name" type="text" name="name"/>
+          <label for="email">
+            {{ $reusablePages.Params.email }}
+          </label>
+          <input id="email" type="email" name="_replyto" required/>
+        </div>
+        <div class="col-md-6 form-right">
+          <label for="message" class="form-message-label">
+            {{ $reusablePages.Params.message }}
+          </label>
+          <textarea id="message" type="textarea" name="message" required></textarea>
+        </div>
+      </div>
+      <div class="consent">
+        <input type="checkbox" id="consent-box" name="tos" required/>
+        <label for="consent-box">
+          {{ $reusablePages.Params.disclaimer }}
+          <a class="disclaimer" href="/tietosuojaseloste">Tietosuojaseloste</a>
+        </label>
+      </div>
+      <button type="submit" class="submit-button">{{ $reusablePages.Params.buttonText }}</button>
+    </form>
+  </div>
+</section>

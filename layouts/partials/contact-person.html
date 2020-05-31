@@ -1,0 +1,22 @@
+<section class="contact-person">
+  {{ $headless := .Site.GetPage "/headless_data" }}
+  {{ $reusablePages := $headless.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "contact-person.md" ) }}
+
+  <div class="container">
+    <h2>{{ $reusablePages.Params.title }}</h2>
+    <div class="row">
+      <div class="col-md-6 contact-person-left">
+        <img src="{{ $reusablePages.Params.image }}" aria-hidden="true">
+      </div>
+      <div class="col-md-6 contact-person-right">
+        <h3>{{ $reusablePages.Params.name }}</h3>
+        <p class="education">{{ $reusablePages.Params.education }}</p>
+        <a href="mailto:{{ $reusablePages.Params.email }}">{{ $reusablePages.Params.email }}</a>
+        <a href="tel:{{ $reusablePages.Params.telephone }}">{{ $reusablePages.Params.telephone }}</a>
+        <a href="https://www.linkedin.com/in/jjlaine/" aria-label="Linkedin-profiili">
+          <img height="32px" src="/images/linkedin.svg" alt="LinkedIn Logo"/>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

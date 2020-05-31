@@ -1,0 +1,60 @@
+{{ define "main" }}
+
+<section class="index-hero">
+  <picture class="index-hero-poster">
+    <source media="(min-width: 384px)" srcset="/images/poster.jpg">
+    <img src="/images/narrow-poster.jpg" aria-hidden="true">
+  </picture>
+  <video class="index-hero-video" poster="/images/transparent-poster.png" autoplay muted loop>
+    <source src="theme.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="index-hero-overlay">
+    <div>
+      <h1>{{ .Params.heroTitle }}</h1>
+      <p class="mono">{{ .Params.heroDescription }}</p>
+      <form onsubmit="return submission(event)">
+        <label class="lighthouse-input-label" for="searchTerm">Osoite</label>
+        <input class="lighthouse-input mono" name="searchTerm" id="searchTerm" placeholder="https://esimerkki.fi" />
+        <button type="submit" aria-label="Lähetä" class="lighthouse-input-button mono">-></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="references">
+  <div class="container">
+    <h2>{{ .Params.referenceTitle }}</h2>
+    <div class="row">
+      {{ range .Params.referenceList }}
+      <div class="col-{{ .width }}">
+        <img class="reference-image" src="{{ .image }}" alt="{{ .alt }}">
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <h2>{{ .Params.serviceTitle }}</h2>
+    {{ range .Params.serviceList }}
+    <div class="row service">
+      <div class="col-md-3 service-left">
+        <h2>{{ .title }}</h2>
+        <img class="service-image" src="{{ .image }}" alt="{{ .alt }}">
+      </div>
+      <div class="col-md-9">
+        <h3>{{ .subTitle }}</h3>
+        <p>{{ .description}}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "contact-person" . }}
+
+{{ partial "contact-form" . }}
+
+{{ end }}

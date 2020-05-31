@@ -1,0 +1,8 @@
+{{ $headless := .Site.GetPage "/headless_data" }}
+{{ $reusablePages := $headless.Resources.GetMatch (strings.TrimPrefix "/headless_data/" "footer.md" ) }}
+
+<footer>
+  <img class="logo" src="/images/logo.svg" alt="StaticCharge Logo" />
+  <p class="copyright mono">{{ $reusablePages.Params.copyright }}</p>
+  <p class="vat mono">{{ $reusablePages.Params.vatNumber }}</p>
+</footer>

@@ -1,0 +1,36 @@
+@import 'constants';
+@import 'index';
+@import 'contact-person';
+@import 'contact-form';
+@import 'footer';
+
+@import '/bootstrap/bootstrap-grid.scss';
+
+body {
+  margin: 0;
+  background-color: #232425;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, label, span, ul, ol, li {
+  color: $white-color;
+  font-weight: normal;
+}
+
+h1, h2, h3, label, .mono {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+p, ul, ol, li {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+a {
+  &:hover {
+    color: $blue-color;
+    transition: 0.1s;
+  }
+}
+
+.container {
+  max-width: 768px;
+}

@@ -1,0 +1,46 @@
+$bread-font: 'Open Sans', serif;
+$header-font: 'IBM Plex Mono', serif;
+
+$black-color: #000000;
+$dark-color: #232425;
+$white-color: #FFFFFF;
+$blue-color: #0070EA;
+
+$size-xs: 0.5rem;
+$size-s: 1rem;
+$size-sm: 1.5rem;
+$size-m: 2rem;
+$size-ml: 4rem;
+$size-l: 6rem;
+$size-xl: 8rem;
+
+$responsive-font-big: calc(24px + 2.2vw);
+$responsive-font-medium: calc(24px + 1.8vw);
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url('/fonts/IBMPlexMono-Regular.ttf') format('truetype');
+}
+
+@mixin blue-button {
+  font-family: "IBM Plex Mono", monospace;
+  background-color: $blue-color;
+  color: $white-color;
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid $blue-color;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+@mixin blue-button-hover {
+  background-color: $white-color;
+  color: $blue-color;
+}
+
