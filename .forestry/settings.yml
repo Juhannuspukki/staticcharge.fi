@@ -8,11 +8,6 @@ sections:
   path: content/_index.md
   label: Front page
 - type: directory
-  path: content
-  label: Pages
-  create: all
-  match: "*"
-- type: directory
   path: content/tietosuojaseloste
   label: Tietosuojaseloste
   create: all
