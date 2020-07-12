@@ -1,5 +1,6 @@
 .index-hero {
   position: relative;
+  z-index: 10;
   .index-hero-poster {
     width: 100%;
     img {
@@ -93,11 +94,16 @@
 
 .services {
   margin-top: 8rem;
+  text-decoration: none;
   h2 {
     font-size: $responsive-font-medium;
     text-align: center;
   }
+  a {
+    text-decoration: none;
+  }
   .service {
+    position: relative;
     margin-top: 4rem;
     &:first-of-type {
       margin-top: 2rem;
@@ -110,6 +116,13 @@
     h3 {
       font-size: 1.1rem;
       margin-top: 0;
+    }
+  }
+  span {
+    font-family: "IBM Plex Mono", monospace;
+    &:hover {
+      color: $blue-color;
+      transition: 0.1s;
     }
   }
   .service-left {

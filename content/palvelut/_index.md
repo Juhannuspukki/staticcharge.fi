@@ -1,26 +1,7 @@
 ---
-title: Nopeimmat mahdolliset verkkosivut
-metaDescription: Kiinnostaako salamannopea sivusto jota ei voi hakkeroida ja jota ei tarvitse ylläpitää?
-heroTitle: Kuinka nopea verkkosivustosi on?
-heroDescription: Anna Google Lighthousen pisteyttää sivusi.
-referenceTitle: Referenssit
-referenceList:
-    - image: /images/references/koodarinpalkka.svg
-      alt: koodarinpalkka
-      width: 12
-    - image: /images/references/muistola.svg
-      alt: Muistola
-      width: 6
-    - image: /images/references/sto.svg
-      alt: Sto Finexter
-      width: 6
-    - image: /images/references/tds.svg
-      alt: TDS
-      width: 6
-    - image: /images/references/avaruuskerho.svg
-      alt: Castor
-      width: 6
-serviceTitle: Palvelut
+type: "services"
+layout: "list"
+title: Palvelut
 serviceList:
     - title: Kotisivut yritykselle
       subTitle: Kiinnostaako salamannopea sivusto jota ei voi hakkeroida ja jota ei tarvitse ylläpitää?
@@ -37,4 +18,14 @@ serviceList:
       image: /images/graphs.svg
       description: Käytättekö yrityksen sisällä Excel-taulukoita, joilla voidaan laskea kätevästi vaikka asiakkaille tehtäviä tarjouksia tai rakennusmateriaalien tai biopolttoaineiden lämpöarvoja? Jos tällainen toiminnallisuus pitäisi saada myös verkkosivuillenne, niin asia järjestyy kyllä. StaticChargen reaaliaikaiset laskurit voidaan upottaa mille tahansa verkkosivulle.
       link: laskurit-ja-visualisoinnit
+    - title: UX-suunnittelu
+      subTitle: Haluatko kehittää palveluitasi käyttäjäystävällisempään suuntaan?
+      image: /images/design.svg
+      description: Sinulla on verkkosivu tai verkkopalvelu, jota mielelläsi kehittäisit. Suunta vain puuttuu. StaticCharge voi auttaa UX-asioissa liikeidean validoinnista käyttäjähaastatteluihin, asiantuntija-arvioihin ja käyttäjien seurantaan.
+      link: ux-suunnittelu
+    - title: Freelance-ohjelmistokehitys
+      subTitle: Onko sinulla jokin muu haaste, jonka ratkaisemisessa ohjelmistokehittäjä voisi auttaa?
+      image: /images/coding.svg
+      description: Jos softaprojektinne tarvitsee lisäkäsiä tai teillä on muuten vain ihan mikä tahansa asia jossa ohjelmistoalan ammattilainen voi olla avuksi, niin ota yhteyttä!
+      link: freelance-ohjelmistokehitys
 ---

@@ -3,6 +3,7 @@
 @import 'contact-person';
 @import 'contact-form';
 @import 'footer';
+@import 'navbar';
 
 @import '/bootstrap/bootstrap-grid.scss';
 
@@ -16,15 +17,19 @@ h1, h2, h3, h4, h5, h6, p, a, label, span, ul, ol, li {
   font-weight: normal;
 }
 
-h1, h2, h3, label, .mono {
+h1, h2, h3, label, .mono, strong, th {
   font-family: "IBM Plex Mono", monospace;
 }
 
-p, ul, ol, li {
+p, ul, ol, li, td {
   font-family: "Open Sans", Helvetica, sans-serif;
 }
 
-a {
+strong {
+  font-size: 1.1rem;
+}
+
+a, .navlink {
   &:hover {
     color: $blue-color;
     transition: 0.1s;
@@ -33,4 +38,43 @@ a {
 
 .container {
   max-width: 768px;
+}
+
+.privacy-policy {
+  margin-top: 4rem;
+}
+
+.hero {
+  h1 {
+    margin-top: 8rem;
+    text-align: center;
+    font-size: $responsive-font-medium;
+  }
+  .hero-background {
+    height: 35vh;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+}
+
+.content {
+  margin-top: 8rem;
+  .indented {
+    p {
+      margin-left: 2rem;
+    }
+  }
+}
+
+table {
+  td, th {
+    color: $white-color;
+    text-align: left;
+  }
+  tr {
+    border-bottom: 1px solid $white-color;
+  }
 }

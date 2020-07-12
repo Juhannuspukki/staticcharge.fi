@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<section class="hero">
+  <img class="hero-background" src="/images/anvil-cloud.svg">
+  <div class="container">
+    <h1>{{ .Params.title }}</h1>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+    {{ .Content | safeHTML }}
+  </div>
+</section>
+
+{{ partial "contact-person" . }}
+
+{{ end }}

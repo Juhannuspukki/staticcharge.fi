@@ -1,3 +1,6 @@
 baseURL = "/"
 languageCode = "fi"
 title = "StaticCharge"
+
+[markup.goldmark.renderer]
+unsafe=true
