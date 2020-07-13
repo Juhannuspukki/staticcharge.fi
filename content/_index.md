@@ -6,18 +6,23 @@ heroDescription: Anna Google Lighthousen pisteyttää sivusi.
 referenceTitle: Referenssit
 referenceList:
     - image: /images/references/koodarinpalkka.svg
+      link: https://koodarinpalkka.fi
       alt: koodarinpalkka
       width: 12
     - image: /images/references/muistola.svg
+      link: https://muistola.fi
       alt: Muistola
       width: 6
     - image: /images/references/sto.svg
+      link: https://sto-laskuri.now.sh
       alt: Sto Finexter
       width: 6
     - image: /images/references/tds.svg
+      link: https://tamperedebatesociety.fi
       alt: TDS
       width: 6
     - image: /images/references/avaruuskerho.svg
+      link: https://avaruuskerho.fi
       alt: Castor
       width: 6
 serviceTitle: Palvelut

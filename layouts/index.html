@@ -28,7 +28,9 @@
     <div class="row">
       {{ range .Params.referenceList }}
       <div class="col-{{ .width }}">
-        <img class="reference-image" src="{{ .image }}" alt="{{ .alt }}">
+        <a href="{{ .link }}" aria-label="{{ .alt }}" target="_blank" rel="noopener noreferrer">
+          <img class="reference-image" src="{{ .image }}" alt="{{ .alt }}">
+        </a>
       </div>
       {{ end }}
     </div>
