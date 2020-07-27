@@ -25,6 +25,10 @@ p, ul, ol, li, td {
   font-family: "Open Sans", Helvetica, sans-serif;
 }
 
+h2, h3 {
+  margin: 1.5rem 0 1.15rem;
+}
+
 strong {
   font-size: 1.1rem;
 }
@@ -73,6 +77,9 @@ table {
   td, th {
     color: $white-color;
     text-align: left;
+  }
+  td:first-of-type {
+    width: calc(65%);
   }
   tr {
     border-bottom: 1px solid $white-color;

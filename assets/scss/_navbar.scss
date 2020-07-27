@@ -46,10 +46,11 @@
   z-index: 9;
   background-color: $dark-color-translucent;
   backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .navbar a:not(:first-child) {display: none;}
   .navbar .burger {
     float: right;
@@ -66,6 +67,7 @@
     text-align: left;
   }
   .navbar.responsive + .navbar-background {
-    height: 6.5rem;
+    height: 10rem;
+    border-bottom: 1px solid $white-color;
   }
 }

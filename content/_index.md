@@ -1,6 +1,7 @@
 ---
 title: Nopeimmat mahdolliset verkkosivut
-metaDescription: Kiinnostaako salamannopea sivusto jota ei voi hakkeroida ja jota ei tarvitse ylläpitää?
+metaDescription: Kiinnostaako salamannopea sivusto joka on huipputurvallinen ja jota
+  ei tarvitse ylläpitää?
 heroTitle: Kuinka nopea verkkosivustosi on?
 heroDescription: Anna Google Lighthousen pisteyttää sivusi.
 referenceTitle: Referenssit
@@ -28,7 +29,7 @@ referenceList:
 serviceTitle: Palvelut
 serviceList:
     - title: Kotisivut yritykselle
-      subTitle: Kiinnostaako salamannopea sivusto jota ei voi hakkeroida ja jota ei tarvitse ylläpitää?
+      subTitle: Kiinnostaako salamannopea sivusto joka on huipputurvallinen ja jota ei tarvitse ylläpitää?
       image: /images/website.svg
       description: Yli 40% vierailijoista hylkää sivuston, joka latautumisessa kestää yli kolme sekuntia. StaticCharge suunnittelee ja toteuttaa nopeimmat mahdolliset sivut. Mikä parasta, tekninen hakukoneoptimointi, responsiivisuus, ilmainen hostaus sekä raudanluja tietoturva ovat aina vakiovarusteita. Voit siis keskittyä olennaiseen, eli sisältöösi.
       link: nopeat-kotisivut-yritykselle

@@ -1,0 +1,51 @@
+---
+label: Front page
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: metaDescription
+  label: metaDescription
+- type: text
+  name: heroTitle
+  label: heroTitle
+- type: text
+  name: heroDescription
+  label: heroDescription
+- type: text
+  name: referenceTitle
+  label: referenceTitle
+- type: field_group_list
+  name: referenceList
+  label: referenceList
+  fields:
+  - type: file
+    name: image
+    label: image
+  - type: text
+    name: alt
+    label: alt
+  - type: number
+    name: width
+    label: width
+- type: text
+  name: serviceTitle
+  label: serviceTitle
+- type: field_group_list
+  name: serviceList
+  label: serviceList
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: subTitle
+    label: subTitle
+  - type: file
+    name: image
+    label: image
+  - type: textarea
+    name: description
+    label: description
