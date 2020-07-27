@@ -13,6 +13,7 @@ const submission = (event) => {
 
 }
 
+// opens and closes the navbar
 const navBar = () => {
   const x = document.getElementById("nav");
   if (x.className === "navbar") {
@@ -21,3 +22,21 @@ const navBar = () => {
     x.className = "navbar";
   }
 }
+
+// opens and closes the chat
+const chat = () => {
+  const x = document.getElementById("chat");
+  if (x.className === "chat") {
+    x.className += " open";
+  } else {
+    x.className = "chat";
+  }
+}
+
+// adds whatsapp link after page load
+window.addEventListener("load", () => {
+  setTimeout(() =>
+      document.getElementById("whatsapp").href = "https://wa" + "." + "me/358" + "4303" + "4303",
+      document.getElementById("telegram").href = "https://t" + "." + "me/ju" + "hannuspukki",
+    1000);
+});
