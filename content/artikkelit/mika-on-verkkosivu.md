@@ -11,13 +11,13 @@ day: 10
 
 Sir Tim-Berners Lee keksi World Wide Webin vuonna 1989 mutta kouluissa ei opeteta suunnilleenkaan kuinka se toimii. Tämä artikkeli toivottavasti avaa maailmanlaajuisen verkon toimintaa hieman.
 
-Lyhyesti sanottuna verkkosivu on tekstitiedosto, joka on jollain toisella tietokoneella. Aika simppeliä, vai mitä?
+Lyhyesti: verkkosivu on yksinkertaisimmillaan tekstitiedosto, joka on jollain toisella tietokoneella. Aika simppeliä, vai mitä?
 
 Ottakaamme esimerkki: kirjoittaessasi osoitepalkkiin vaikkapa https://staticcharge.fi lähettää selain tuossa osoitteessa sijaitsevalle erikoistuneelle tietokoneelle (“palvelimelle”) pyynnön saada kopio sille varastoidusta tekstitiedostosta. Jos kaikki menee kuten pitää, palvelin lähettää tiedoston paluupostissa takaisin sitä pyytäneelle selaimelle. Ihan missä tahansa muodossa tekstitiedoston sisältö ei kuitenkaan voi olla, vaan selaimet ymmärtävät pääasiassa kolmea eri merkintätapaa, jotka ovat…
 
 ## HTML, CSS ja Javascript
 
-HTML eli HyperText Markup Language, CSS eli Cascading Style Sheets ja Javascript ovat minkä tahansa verkkosivun peruspilarit. Jos tehdään vertaus luonnolliseen kieleen, niitä voi verrata sanaluokkiin. HTML on vähän kuin substantiivit: se kertoo, mitä elementtejä sivulla on. Tekstiä, kuvia, navigaatiopalkkeja. CSS taas on kieli, joka ei yksinään tee mitään mutta HTML:ään yhdistettynä se kertoo millaisia sivun elementit ovat. Navigaatiopalkki on ylhäällä ja väriltään harmaa. Javascript puolestaan vastaa verbejä: sen avulla HTML-elementtejä voi esimerkiksi liikuttaa, poistaa ja luoda täysin mielivaltaisesti.
+HTML eli HyperText Markup Language, CSS eli Cascading Style Sheets ja Javascript ovat minkä tahansa verkkosivun peruspilarit. Jos tehdään vertaus luonnolliseen kieleen, niitä voi verrata sanaluokkiin. HTML on vähän kuin substantiivit: se kertoo, mitä elementtejä sivulla on. Tekstiä, kuvia, navigaatiopalkkeja. CSS taas vastaa adjektiiveja. HTML:ään yhdistettynä CSS kertoo millaisia sivun elementit ovat: navigaatiopalkki on ylhäällä ja väriltään harmaa. Javascript puolestaan vastaa verbejä: sen avulla HTML-elementtejä voi esimerkiksi liikuttaa, poistaa ja luoda täysin mielivaltaisesti.
 
 Miltä nämä merkintätavat sitten näyttävät? Muutama esimerkki:
 
@@ -102,7 +102,7 @@ Dynaamiseen sivuun kuuluu useimmiten tietokanta tai useampikin. Tietokantoihin o
 
 Samaa tekniikkaa alettiin käyttää myös sellaisissa sivuissa, joissa käyttäjiä ei tarvitse erottaa toisistaan. Tällöin saavutettava merkittävä etu on sisällönhallintajärjestelmä (CMS): sivuston muokkaajan ei tarvitse enää osata kirjoittaa HTML-tiedostoja, vaan hän kykenee luomaan sisällön helppokäyttöisellä tekstieditorilla joka tallentaa kaiken tietokantaan automaattisesti. Palvelimen ohjelmakoodi koostaa sitten tämän perusteella käyttäjälle lähetettävän HTML-sivun. Tällaisia sisällönhallintajärjestelmiä ovat esimerkiksi Wordpress ja Drupal.
 
-Dynaamisten sivujen mukana tuli kuitenkin kaksi ei-toivottua sivuvaikutusta: ensiksi, ohjelmakoodin suorittaminen palvelimella vaatii huomattavasti enemmän suorituskykyä kuin pelkkä staattisen sivun lähettäminen. Toiseksi, se teki mahdolliseksi tietokantoihin kohdistuvat kyberhyökkäykset. 
+Dynaamisten sivujen mukana tuli kuitenkin kaksi ei-toivottua sivuvaikutusta: ensiksi, ohjelmakoodin suorittaminen palvelimella vaatii huomattavasti enemmän aikaa ja suorituskykyä kuin pelkkä staattisen sivun lähettäminen. Toiseksi, se teki mahdolliseksi tietokantoihin tai palvelimen ohjelmistoon itseensä kohdistuvat kyberhyökkäykset. 
 
 Palvelimella olevaa ohjelmistoa kutsutaan backendiksi ja ne ovat backend-kehittäjien alaa. Jos ohjelmoija osaa sekä frontend- että backend-kehitystä, häntä sanotaan full stack-kehittäjäksi.
 
