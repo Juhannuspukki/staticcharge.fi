@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<section class="article-hero">
+  <div class="container">
+    <h1>{{ .Params.title }}</h1>
+    <p><i>Julkaistu {{ .Params.day }}.{{ .Params.month }}.{{ .Params.year }}
+      , lukuaika {{ .ReadingTime }} minuuttia</i></p>
+  </div>
+</section>
+
+<section class="article-content">
+  <div class="container">
+    {{ .Content | safeHTML }}
+  </div>
+</section>
+
+{{ end }}

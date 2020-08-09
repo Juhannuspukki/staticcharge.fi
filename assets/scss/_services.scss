@@ -1,0 +1,92 @@
+.service-content {
+  margin-top: 6rem;
+}
+
+.service-segments {
+  text-decoration: none;
+  h2 {
+    font-size: $responsive-font-medium;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+  }
+  .service {
+    position: relative;
+    margin-top: 4rem;
+    &:first-of-type {
+      margin-top: 2rem;
+    }
+    h2 {
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 0;
+    }
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+  }
+  span {
+    font-family: "IBM Plex Mono", monospace;
+    &:hover {
+      color: $blue-color;
+      transition: 0.1s;
+    }
+  }
+  .service-left {
+    .service-image {
+      position: relative;
+      display: block;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 100%;
+      max-width: 100%;
+      padding: 0 2rem;
+    }
+    &::after { 
+      content:""; 
+      position: absolute;
+      top: 0;
+      right: 8px;
+      background: $white-color; 
+      height:100%; 
+      width:4px; 
+      border-radius: 3px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+.service-segments {
+  .service {
+    margin-top: 4rem;
+    text-align: center;
+    h2 {
+      font-size: 1.25rem;
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+  }
+  .service-left {
+    .service-image {
+      padding-bottom: 2rem;
+    }
+    &::after { 
+      content: ""; 
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $white-color; 
+      height: 4px; 
+      width: 100%;
+      max-width: 20rem;
+      border-radius: 3px;
+      }
+    }
+  }
+}

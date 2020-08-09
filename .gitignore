@@ -1,5 +1,7 @@
 .env
 .env.build
 
+resources/_gen/
+public/
 .idea/
 .DS_Store

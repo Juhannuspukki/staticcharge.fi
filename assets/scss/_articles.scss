@@ -1,0 +1,33 @@
+.article-hero {
+  .container {
+    padding-top: 8rem;
+  }
+  h1 {
+    font-size: $responsive-font-medium;
+    margin: 0
+  }
+}
+
+.article-content {
+  margin-top: 6rem;
+}
+
+.article-cards {
+  margin-top: 6rem;
+  .article-card {
+    text-decoration: none;
+    h2 {
+      margin: 0;
+    }
+    .date-and-time {
+      margin: 0.75rem 0 1.25rem
+    }
+    span {
+      font-family: "IBM Plex Mono", monospace;
+      &:hover {
+        color: $blue-color;
+        transition: 0.1s;
+      }
+    }
+  }
+}

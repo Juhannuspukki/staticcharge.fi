@@ -6,5 +6,26 @@
     <h1>{{ .Params.title }}</h1>
   </div>
 </section>
+<section class="article-cards">
+  <div class="container">
+    <div class="row">
+        {{ range ((.Data.Pages).ByParam "date").Reverse }}
+        <div class="col-md-6">
+          <a href="{{ .Permalink }}" class="article-card">
+            <div>
+              <img class="blog-thumbnail" src="{{ .Params.thumbnail }}" aria-label="hidden">
+            </div>
+            <div>
+              <h2>{{ .Params.title }}</h2>
+              <p class="date-and-time"><i>{{ .Params.day }}.{{ .Params.month }}.{{ .Params.year }}, lukuaika {{ .ReadingTime }} min</i></p>
+              <p>{{ .Summary }}</p>
+              <span>Lue lisää -></span>
+            </div>
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
 
 {{ end }}

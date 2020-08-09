@@ -5,6 +5,8 @@
 @import 'footer';
 @import 'navbar';
 @import 'chat';
+@import 'services';
+@import 'articles';
 
 @import '/bootstrap/bootstrap-grid.scss';
 
@@ -13,16 +15,16 @@ body {
   background-color: #232425;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, label, span, ul, ol, li {
+h1, h2, h3, h4, h5, h6, p, a, label, span, ul, ol, li, code, figcaption {
   color: $white-color;
   font-weight: normal;
 }
 
-h1, h2, h3, label, .mono, strong, th {
+h1, h2, h3, label, .mono, strong, th, code {
   font-family: "IBM Plex Mono", monospace;
 }
 
-p, ul, ol, li, td {
+p, ul, ol, li, td, figcaption {
   font-family: "Open Sans", Helvetica, sans-serif;
 }
 
@@ -32,6 +34,14 @@ h2, h3 {
 
 strong {
   font-size: 1.1rem;
+}
+
+code {
+  font-size: 0.6rem;
+}
+
+figure {
+  margin: 0;
 }
 
 a, .navlink {
@@ -66,7 +76,7 @@ a, .navlink {
 }
 
 .content {
-  margin-top: 8rem;
+  margin-top: 6rem;
   .indented {
     p {
       margin-left: 2rem;

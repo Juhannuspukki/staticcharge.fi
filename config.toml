@@ -1,6 +1,7 @@
 baseURL = "/"
 languageCode = "fi"
 title = "StaticCharge"
+summaryLength = 30
 
 [markup.goldmark.renderer]
 unsafe=true
