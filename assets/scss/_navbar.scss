@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 11;
+  z-index: 12;
   .container {
     max-width: 1120px;
   }
@@ -67,7 +67,8 @@
     text-align: left;
   }
   .navbar.responsive + .navbar-background {
-    height: 10rem;
+    z-index: 11;
+    height: 14rem;
     border-bottom: 1px solid $white-color;
   }
 }
