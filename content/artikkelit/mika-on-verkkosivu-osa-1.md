@@ -1,7 +1,7 @@
 ---
 type: "articles"
 layout: "single"
-title: Mikä on verkkosivu?
+title: Mikä on verkkosivu? (osa 1)
 tags: Alkeet aloittelijoille
 author: Jere Laine
 year: 2020
