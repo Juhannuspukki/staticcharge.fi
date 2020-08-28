@@ -19,7 +19,7 @@ Applen toimitusjohtaja Steve Jobs ei ollut suuri Flashin ystävä ja kieltäytyi
 
 ## AJAX
 
-Samaan aikaa toisaalla propellipäät alkoivat pohtia, että saisiko staattisten ja dynaamisten sivujen hyviä puolia yhdistettyä jotenkin. Kehitettiin AJAX, joka on lyhenne sanoista Asynchronous Javascript And XML. Käytännössä se tarkoitti sitä, että Javascriptiä alettiin käyttää tiedon hakemiseen palvelimilta jokseenkin tähän tapaan:
+Samaan aikaa toisaalla propellipäät alkoivat pohtia, että saisiko staattisten ja dynaamisten sivujen hyviä puolia yhdistettyä jotenkin. Syntyi konsepti nimeltään AJAX (lyhenne sanoista Asynchronous Javascript And XML). Käytännössä se tarkoitti sitä, että Javascriptiä alettiin käyttää tiedon hakemiseen palvelimilta jokseenkin tähän tapaan:
 
 1. Käyttäjä menee haluamaansa verkko-osoitteeseen.
 2. Palvelin lähettää paluupostissa HTML-tiedoston ja Javascriptiä.
@@ -35,22 +35,22 @@ Tällä tavalla sivustoa saatiin nopeutettua, kun jokaista pientä muutosta vart
 
 ## Moderni web-kehitys ja SPA:n käsite
 
-Miten siis voimme kirjoittaa web-applikaation ilman että siitä tulee sellainen rytökärpänpesä että sitä ei kuukauden päästä käyttöönotosta ymmärrä kukaan, ei edes tekijä itse? Vajaat kymmenen vuotta sitten kehitettiin _ohjelmistokirjastoja_ jotka mahdollistavat Javascriptin kirjoittamisen uudella tavalla siten, että jopa monimutkaisen interaktiivisen sivuston koodi säilyy helposti ymmärrettävänä ja laajennettavana. Tällaisia kirjastoja ovat esimerkiksi React, Vue.js ja Angular.
+Miten siis voimme kirjoittaa web-applikaation ilman että siitä tulee sellainen rytökärpänpesä että sitä ei kuukauden päästä käyttöönotosta ymmärrä kukaan, ei edes tekijä itse? Vajaat kymmenen vuotta sitten kehitettiin _käyttöliittymäkirjastoja,_ jotka mahdollistavat Javascriptin kirjoittamisen uudella tavalla siten, että jopa monimutkaisen interaktiivisen sivuston koodi säilyy helposti ymmärrettävänä ja laajennettavana. Tällaisia kirjastoja ovat esimerkiksi React, Vue.js ja Angular.
 
 Kyseisiä teknologioita voi myös käyttää helposti niin sanotun SPA:n (Single Page Application) valmistamiseen. Termi tarkoittaa, että koko verkkosivusto koostuu yhdestä ainoasta HTML-tiedostosta ja Javascriptistä. Käyttäjän liikkuessa sivustolla sivu ei siis todellisuudessa koskaan vaihdu, vaan yhden ja saman sivun sisältöä muokataan ohjelmallisesti ja tietoa haetaan palvelimelta AJAX-tyyppisesti kun sitä tarvitaan. Sivuston sisällä navigointi tapahtuu käytännössä ilman viivettä. Näin palvelimet eivät enää koosta HTML-dokumentteja, vaan logiikka on siirretty lähes kokonaan käyttäjän tietokoneelle.
 
 Mitä hyötyjä ja haittoja näillä moderneilla sivuilla sitten on? Hyötyihin lukeutuvat seuraavat:
 
-1. Vaikka sivusto olisi monimutkainen, sen koodi säilyy ymmärrettävänä ja sitä on helppo kehittää.
+1. Vaikka sivusto olisi monimutkainen, sen koodi säilyy ymmärrettävänä ja sitä on helppo kehittää (paitsi jos sivustoa ei ylläpidä).
 2. Sivu on perinteistä dynaamista sivua nopeampi.
 3. Sivustolla käytetty sisällönhallintäjärjestelmä (ns. headless CMS) voi aivan hyvin toimia tietolähteenä myös vaikkapa mobiilisovellukselle.
-4. Frontend ja backend ovat täysin toisistaan erillisiä. Kumpikin järjestelmä voidaan tarvittaessa korvata toisella.
+4. Frontend ja backend ovat täysin toisistaan erillisiä. Kumpikin järjestelmä voidaan tarvittaessa korvata toisella melko helposti.
 
-Ongelmattomia ne eivät kuitenkaan ole. Heikkouksiin lukeutuvat seuraavat:
+Heikkouksiin taas lukeutuvat seuraavat:
 
 1. Javascript vanhenee nopeasti ja sivustoa on ylläpidettävä aktiivisesti. Jos näin ei tehdä, kolme vuotta vanha sivu on antiikkia josta kukaan ymmärrä enää yhtään mitään.
 2. Teknisesti monimutkaisempi kuin perinteinen staattinen sivu, jossa Javascriptin määrä on minimissä.
 3. Javascriptin suorittaminen selaimessa voi olla hidasta hommaa, etenkin jos käyttäjän päätelaite on halpahallin alelaarista.
 4. Hakukone joutuu suorittamaan sivustolla olevan Javascriptin saadakseen selville, mitä sisältöä sivulla on. Google osaa sen kyllä tehdä, mutta sivuston indeksointi saattaa olla hitaampaa kuin perinteisen sivun.
 
-Summa summarum: jos sivustosi sisältää runsaasti interaktiivista toiminnallisuutta tai haluat päivittää mobiilisovellusta samalla sisällönhallintajärjestelmällä, kannattaa suosia moderneja ohjelmistokirjastoja. Jos taas sivusto ei sisällä juurikaan interaktiivisia toiminnallisuuksia, kannattanee pitäytyä perinteisessä Javascriptittömässä sivussa koska se ei vaadi minkäänlaista aktiivista ylläpitoa ja on erittäin nopea.
+Summa summarum: jos sivustosi sisältää runsaasti interaktiivista toiminnallisuutta tai haluat päivittää mobiilisovellusta samalla sisällönhallintajärjestelmällä, kannattaa suosia moderneja käytttöliittymäkirjastoja. Jos taas sivusto ei sisällä juurikaan interaktiivisia toiminnallisuuksia, kannattanee pitäytyä Javascriptittömässä staattisessa sivussa käytttöliittymäkirjastoista koska se ei vaadi minkäänlaista aktiivista ylläpitoa eikä käyttöliittymäkirjastoista olisi toteutuksessa juurikaan hyötyä.
