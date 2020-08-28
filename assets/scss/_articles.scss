@@ -10,12 +10,17 @@
 
 .article-content {
   margin-top: 6rem;
+  img {
+    width: 100%;
+  }
 }
 
 .article-cards {
   margin-top: 6rem;
   .article-card {
+    display: block;
     text-decoration: none;
+    margin-bottom: 2rem;
     h2 {
       margin: 0;
     }
@@ -29,5 +34,6 @@
         transition: 0.1s;
       }
     }
+  
   }
 }

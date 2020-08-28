@@ -28,6 +28,11 @@ Samaan aikaa toisaalla propellipäät alkoivat pohtia, että saisiko staattisten
 
 Tällä tavalla sivustoa saatiin nopeutettua, kun jokaista pientä muutosta varten ei tarvinnut ladata sivua kokonaan uudestaan. Riitti, että pieni osa sivusta päivitetään. Siitä ei toisaalta ollut juurikaan apua sivustojen monimutkaisuusongelmaan, pikemminkin päinvastoin.
 
+<figure>
+<img src="/images/youtube.jpg" alt="Youtube">
+<figcaption>Esimerkiksi Youtube lähettää vierailijalle ensin tämän näköisen sivun. Placeholderit korvataan Javascriptin avulla oikealla sisällöllä heti, kun se on saatu haettua palvelimelta.</figcaption>
+</figure>
+
 ## Moderni web-kehitys ja SPA:n käsite
 
 Miten siis voimme kirjoittaa web-applikaation ilman että siitä tulee sellainen rytökärpänpesä että sitä ei kuukauden päästä käyttöönotosta ymmärrä kukaan, ei edes tekijä itse? Vajaat kymmenen vuotta sitten kehitettiin _ohjelmistokirjastoja_ jotka mahdollistavat Javascriptin kirjoittamisen uudella tavalla siten, että jopa monimutkaisen interaktiivisen sivuston koodi säilyy helposti ymmärrettävänä ja laajennettavana. Tällaisia kirjastoja ovat esimerkiksi React, Vue.js ja Angular.
@@ -45,7 +50,7 @@ Ongelmattomia ne eivät kuitenkaan ole. Heikkouksiin lukeutuvat seuraavat:
 
 1. Javascript vanhenee nopeasti ja sivustoa on ylläpidettävä aktiivisesti. Jos näin ei tehdä, kolme vuotta vanha sivu on antiikkia josta kukaan ymmärrä enää yhtään mitään.
 2. Teknisesti monimutkaisempi kuin perinteinen staattinen sivu, jossa Javascriptin määrä on minimissä.
-3. Javascriptin suorittaminen selaimessa voi olla hidasta hommaa jos käyttäjän päätelaite on vanha.
+3. Javascriptin suorittaminen selaimessa voi olla hidasta hommaa, etenkin jos käyttäjän päätelaite on halpahallin alelaarista.
 4. Hakukone joutuu suorittamaan sivustolla olevan Javascriptin saadakseen selville, mitä sisältöä sivulla on. Google osaa sen kyllä tehdä, mutta sivuston indeksointi saattaa olla hitaampaa kuin perinteisen sivun.
 
-Summa summarum: jos sivustosi sisältää runsaasti interaktiivista toiminnallisuutta tai haluat päivittää mobiilisovellusta samalla sisällönhallintajärjestelmällä, kannattaa suosia moderneja ohjelmistokirjastoja. Jos taas sivusto ei sisällä juurikaan interaktiivisia toiminnallisuuksia, kannattanee pitäytyä perinteisessä staattisessa sivussa koska se ei vaadi minkäänlaista aktiivista ylläpitoa ja on erittäin nopea.
+Summa summarum: jos sivustosi sisältää runsaasti interaktiivista toiminnallisuutta tai haluat päivittää mobiilisovellusta samalla sisällönhallintajärjestelmällä, kannattaa suosia moderneja ohjelmistokirjastoja. Jos taas sivusto ei sisällä juurikaan interaktiivisia toiminnallisuuksia, kannattanee pitäytyä perinteisessä Javascriptittömässä sivussa koska se ei vaadi minkäänlaista aktiivista ylläpitoa ja on erittäin nopea.
