@@ -3,20 +3,7 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections:
-- type: document
-  path: content/_index.md
-  label: Front page
-- type: directory
-  path: content/tietosuojaseloste
-  label: Tietosuojaseloste
-  create: all
-  match: "**/*"
-- type: directory
-  path: content/headless_data
-  label: Headless data
-  create: all
-  match: "**/*"
+sections: 
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
