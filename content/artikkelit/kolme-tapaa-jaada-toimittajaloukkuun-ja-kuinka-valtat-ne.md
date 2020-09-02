@@ -38,63 +38,16 @@ HUS tilasi noin puolella miljardilla eurolla potilastietojärjestelmän yhdysval
 
 Apotti-järjestelmä on koodattu MUMPS-nimisellä kielellä (lyhenne sanoista Massachusetts General Hospital Utility Multi-Programming System) joka kehitettiin 1960-luvulla. MUMPS on täydellisesti dokumentoitu ja sitä voi periaatteessa opetella itse internetistä. Ongelma on kuitenkin siinä, että MUMPS näyttää tältä:
 
-Q N R,Q,C,D,E,W,B,G,H,S,T,U,V,F,L,P,N,J,A S N=$G(N),Q='N,F=Q+Q,P=F+F,W=$L($T(Q))
-
-S W=$E(W,Q),S='N_+N,W=W-F*S,L=$G(L),R=$C(Q_F_P),R(F)=$C(F+Q_F),R(P)=$C(W-F) W #
-
-S T=$E($T(Q+F),F,W\\S)_$C(W+S+F) X T S B=$P(T,$C(P_P),F),C=B\\(W*W),D=B-(C*W*W)\\W
-
-F G=S-Q:F:S+F+Q S E=B-(C*W*W+(D*W)),H=$E($T(Q),G),@H=$S(@H<S:'Q,Q:N)_@H,T=C_D_E
-
-F A=Q:Q:W\\S S J=$E(T,A),C(F)=$S(J>(F+Q)&(J<(S-F)):Q,Q:+N),C(P)=$S(J#F:Q,Q:+N) D
-
-.S C(Q)=$S(J<(S-F):+N,Q:Q),C(F+Q)=$S(J>Q&(J<(S-F))&(J'=(P+'L))&(J'=(P)):Q,Q:+N)
-
-.S H('L)=L F S H(N?.E)=$O(C(H('$G(N)))) Q:H('+L)=L S F(A,H('L))=C(H(W\[(W\\S)))
-
-F U=Q:Q:P W !,R F V=Q:Q:P+F W $S(F(V,U):'Q,Q:$C(P_(W\\S))) W:'(V#F) $C('N_F_F+F)
-
-W !!,R(F)_C_R(P)_D_R(P)_E_R(F) X $RE($E($T(Q),Q+F,P+Q))_R(P)_'N W # G:N=L Q+F Q
-
-%DTC
-
-%DTC ; SF/XAK - DATE/TIME OPERATIONS ;1/16/92 11:36 AM
-
-;;19.0;VA FileMan;;Jul 14, 1992
-
-D I 'X1!'X2 S X="" Q
-
-S X=X1 D H S X1=%H,X=X2,X2=%Y+1 D H S X=X1-%H,%Y=%Y+1&X2
-
-K %H,X1,X2 Q
-
-;
-
-C S X=X1 Q:'X D H S %H=%H+X2 D YMD S:$P(X1,".",2) X=X_"."_$P(X1,".",2)
-
-K X1,X2 Q
-
-S S %=%#60/100+(%#3600\\60)/100+(%\\3600)/100 Q
-
-;
-
-H I X<1410000 S %H=0,%Y=-1 Q
-
-S %Y=$E(X,1,3),%M=$E(X,4,5),%D=$E(X,6,7)
-
-S %T=$E(X_0,9,10)*60+$E(X_"000",11,12)*60+$E(X_"00000",13,14)
-
-TOH S
-
-%H=%M>2&'(%Y#4)+$P("^31^59^90^120^151^181^212^243^273^304^334","^",%M)+%D
-
-S %='%M!'%D,%Y=%Y-141,%H=%H+(%Y*365)+(%Y\\4)-(%Y>59)+%,%Y=$S(%:-
-
-1,1:%H+4#7)
-
-K %M,%D,% Q
-
-;
+    Q N R,Q,C,D,E,W,B,G,H,S,T,U,V,F,L,P,N,J,A S N=$G(N),Q='N,F=Q+Q,P=F+F,W=$L($T(Q))
+     S W=$E(W,Q),S='N_+N,W=W-F*S,L=$G(L),R=$C(Q_F_P),R(F)=$C(F+Q_F),R(P)=$C(W-F) W #
+     S T=$E($T(Q+F),F,W\S)_$C(W+S+F) X T S B=$P(T,$C(P_P),F),C=B\(W*W),D=B-(C*W*W)\W
+     F G=S-Q:F:S+F+Q S E=B-(C*W*W+(D*W)),H=$E($T(Q),G),@H=$S(@H<S:'Q,Q:N)_@H,T=C_D_E
+     F A=Q:Q:W\S S J=$E(T,A),C(F)=$S(J>(F+Q)&(J<(S-F)):Q,Q:+N),C(P)=$S(J#F:Q,Q:+N) D
+     .S C(Q)=$S(J<(S-F):+N,Q:Q),C(F+Q)=$S(J>Q&(J<(S-F))&(J'=(P+'L))&(J'=(P)):Q,Q:+N)
+     .S H('L)=L F  S H(N?.E)=$O(C(H('$G(N)))) Q:H('+L)=L  S F(A,H('L))=C(H(W[(W\S)))
+     F U=Q:Q:P W !,R F V=Q:Q:P+F W $S(F(V,U):'Q,Q:$C(P_(W\S))) W:'(V#F) $C('N_F_F+F)
+     W !!,R(F)_C_R(P)_D_R(P)_E_R(F) X $RE($E($T(Q),Q+F,P+Q))_R(P)_'N W # G:N=L Q+F Q
+    
 
 Voi olla, että ei-koodarille kaikki koodi näyttää suunnilleen tältä. Voin kuitenkin vakuuttaa, että myöskään 99% koodareista ei ymmärrä tästä yhtään sen enempää. Muiden puutteiden ohella MUMPSin syntaksi on täysin käsittämätön, eikä sitä käytetä juuri missään muualla kuin muutamissa pankeissa ja sairaaloissa. Tällaista ei kovin moni vapaaehtoisesti opettele, ja Suomen harvat MUMPS-koodarit ovat pitkälti Epicin palkkalistoilla. Yritä siinä sitten vaihtaa toimittajaa.
 
