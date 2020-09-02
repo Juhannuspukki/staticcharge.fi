@@ -55,7 +55,7 @@ Varmistu siis siitä, että tilaamassasi tuotteessa käytetty teknologia on aina
 
 ## 3. Kelvottoman toteutuksen toimittajaloukku
 
-Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+_Any fool can write code that a computer can understand. Good programmers write code that humans can understand._
 
 Vaikka käytetty teknologia olisi yleisesti tunnettua, siitä ei ole hyötyä jos koodi on niin vaikeaselkoista että vain alkuperäinen tekijä osaa lukea sitä. Jos alkuperäinen tekijä päättää sitten lopettaa koodaushommat ja ryhtyä puutarhuriksi, on asiakas vaikeuksissa. Tämä on kuitenkin ongelma lähinnä pienen mittakaavan projekteissa, koska kaikissa itseään kunnioittavissa ohjelmistofirmoissa koodin ymmärrettävyyteen kiinnitetään erityistä huomiota.
 
