@@ -22,6 +22,7 @@ fields:
 - type: text
   name: author
   label: author
+  default: Jere Laine
 - type: number
   name: year
   label: year
