@@ -1,0 +1,28 @@
+---
+label: Blog post
+hide_body: false
+fields:
+- type: text
+  name: type
+  label: type
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: tags
+  label: tags
+- type: text
+  name: author
+  label: author
+- type: number
+  name: year
+  label: year
+- type: number
+  name: month
+  label: month
+- type: number
+  name: day
+  label: day
