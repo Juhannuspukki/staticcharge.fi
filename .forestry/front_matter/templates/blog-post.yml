@@ -5,9 +5,13 @@ fields:
 - type: text
   name: type
   label: type
+  hidden: true
+  default: articles
 - type: text
   name: layout
   label: layout
+  hidden: true
+  default: single
 - type: text
   name: title
   label: title
