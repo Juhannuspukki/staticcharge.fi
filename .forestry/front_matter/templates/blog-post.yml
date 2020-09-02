@@ -31,3 +31,5 @@ fields:
 - type: number
   name: day
   label: day
+pages:
+- content/artikkelit/kolme-tapaa-jaada-toimittajaloukkuun-ja-kuinka-valtat-ne.md
