@@ -4,9 +4,7 @@ layout: "single"
 title: Mikä on verkkosivu? (osa 1)
 tags: Alkeet aloittelijoille
 author: Jere Laine
-year: 2020
-month: 8
-day: 10
+date: 2020-08-10
 ---
 
 Sir Tim-Berners Lee keksi World Wide Webin vuonna 1989 mutta kouluissa ei opeteta suunnilleenkaan kuinka se toimii. Tämä artikkeli toivottavasti avaa maailmanlaajuisen verkon toimintaa hieman.

@@ -15,7 +15,7 @@
         </div>
         <div>
           <h2>{{ .Params.title }}</h2>
-          <p class="date-and-time"><i>{{ .Params.day }}.{{ .Params.month }}.{{ .Params.year }}, lukuaika {{ .ReadingTime }} min</i></p>
+          <p class="date-and-time"><i>{{ .Params.date.Format "2.1.2006" }}, lukuaika {{ .ReadingTime }} min</i></p>
           <p>{{ .Summary }}</p>
           <span>Lue lisää -></span>
         </div>

@@ -4,9 +4,7 @@ layout: "single"
 title: Mikä on verkkosivu? (osa 2)
 tags: Alkeet aloittelijoille
 author: Jere Laine
-year: 2020
-month: 8
-day: 28
+date: 2020-08-26
 ---
 
 Kun yritykset tarvitsivat yhä monipuolisempia toiminnallisuuksia, kasvoi verkkosivustojen tekninen monimutkaisuus eksponentiaalisesti. Ensin suoritettiin palvelimella oleva ohjelmakoodi, joka kasasi käyttäjälle lähetettävän HTML-sivun. HTML:n mukana tuli Javascriptiä, jolla toteutettiin lisää toiminnallisuuksia. Ohjelmalogiikkaa oli kahdessa kerroksessa ja hyvin pian oltiin tilanteessa, jossa sivu oli niin monimutkainen että sen päivittäminen oli mahdotonta. Pienenkin uuden toiminnallisuuden lisääminen rikkoi kymmenen vanhaa.

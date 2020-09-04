@@ -3,7 +3,7 @@
 <section class="article-hero">
   <div class="container">
     <h1>{{ .Params.title }}</h1>
-    <p><i>Julkaistu {{ .Params.day }}.{{ .Params.month }}.{{ .Params.year }}
+    <p><i>Julkaistu {{ .Params.date.Format "2.1.2006" }}
       , lukuaika {{ .ReadingTime }} minuuttia</i></p>
   </div>
 </section>
