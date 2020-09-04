@@ -1,0 +1,34 @@
+---
+label: Blog post
+hide_body: false
+fields:
+- type: text
+  name: type
+  label: type
+  hidden: true
+  default: articles
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: single
+- type: text
+  name: title
+  label: title
+- name: tags
+  type: tag_list
+  default: []
+  label: tags
+- type: text
+  name: author
+  label: author
+  default: Jere Laine
+- type: number
+  name: year
+  label: year
+- type: number
+  name: month
+  label: month
+- type: number
+  name: day
+  label: day
