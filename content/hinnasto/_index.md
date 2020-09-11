@@ -19,7 +19,7 @@ Kaikki StaticChargen sivut ja verkkokaupat ovat käsin tehtyjä, eikä valmiita 
   <tbody>
     <tr>
       <td>Sivuston toteutus</td>
-      <td>400-800€ / sivu</td>
+      <td>300-800€ / sivu</td>
     </tr>
     <tr>
       <td>Käyttöliittymäsunnittelu</td>
@@ -31,7 +31,7 @@ Kaikki StaticChargen sivut ja verkkokaupat ovat käsin tehtyjä, eikä valmiita 
     </tr>
     <tr>
       <td>Hosting (extreme)</td>
-      <td>15€ / kk</td>
+      <td>10€ / kk</td>
     </tr>
   </tbody>
 </table>

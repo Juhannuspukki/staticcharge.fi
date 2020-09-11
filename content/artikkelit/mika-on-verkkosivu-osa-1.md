@@ -36,7 +36,6 @@ Miltä nämä merkintätavat sitten näyttävät? Muutama esimerkki:
   &lt;p&gt;Tämä on kappale&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-
 </code>
 </pre>
 </figure>
