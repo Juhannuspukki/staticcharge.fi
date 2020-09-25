@@ -36,7 +36,7 @@ const chat = () => {
 // adds whatsapp link after page load
 window.addEventListener("load", () => {
   setTimeout(() =>
-      document.getElementById("whatsapp").href = "https://wa" + "." + "me/358" + "4303" + "4303",
+      document.getElementById("whatsapp").href = "https://wa" + "." + "me/358" + "45866" + "4303",
       document.getElementById("telegram").href = "https://t" + "." + "me/ju" + "hannuspukki",
     1000);
 });
