@@ -32,5 +32,3 @@ fields:
 - type: number
   name: day
   label: day
-pages:
-- content/artikkelit/test.md
