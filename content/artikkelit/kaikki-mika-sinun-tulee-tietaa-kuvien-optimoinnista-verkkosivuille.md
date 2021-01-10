@@ -187,7 +187,7 @@ GIF-formaattia ei tule missään tapauksessa käyttää animoitujen kuvien esitt
 <div class="row">
   <div class="col-sm-5">
     <figure>
-    <video autoplay muted loop>
+    <video autoplay muted loop playsinline>
     <source src="team-vs-freelance.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
