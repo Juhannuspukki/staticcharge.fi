@@ -11,8 +11,15 @@
 .article-content {
   margin-top: 6rem;
   overflow: hidden;
-  img {
+  img, code {
     width: 100%;
+  }
+  video {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    max-height: 25rem;
   }
   a, code {
     word-wrap: break-word

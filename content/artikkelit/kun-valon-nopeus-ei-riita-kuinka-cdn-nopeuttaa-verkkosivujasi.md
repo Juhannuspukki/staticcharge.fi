@@ -2,7 +2,7 @@
 type: "articles"
 layout: "single"
 title: "Kun valon nopeus ei riitä: kuinka CDN nopeuttaa verkkosivujasi"
-tags: Ohjelmiston ostaminen
+tags: Nopeus
 author: Jere Laine
 date: 2020-09-11
 ---

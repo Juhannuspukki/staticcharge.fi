@@ -13,7 +13,7 @@ Domain-nimen eli _verkko-osoitteen_ tai _verkkotunnuksen_ hankinta on asia, joka
 
 Teknisesti verkkosivu ei tarvitse domainia toimiakseen, koska liikennettä ei reititetä internetissä domainin vaan IP-osoitteen perusteella. Reaalimaailmassa IP-osoitetta voisi verrata GPS-koordinaatteihin: GPS-koordinaatit kertovat yksiselitteisesti vaikkapa talosi sijainnin. Sijainnille on kuitenkin myös toinen abstraktio eli katuosoite, esimerkiksi Sypressikuja 3 joka on huomattavasti helpompi muistaa kun koordinaatit. Domain on siis vähän kuin katuosoite. Niin verkkosivusi kuin talosi voivat olla olemassa, vaikka niillä ei olisikaan osoitetta. Niiden löytäminen saattaa kuitenkin olla tällöin hankalaa.
 
-Tosielämässä meillä on myös navigaattoreita: laitteita, jotka osaavat muuttaa osoitteet GPS-koordinaateiksi ja sitten ohjata sinut oikeaan paikkaan. Internetissä navigaattoreita vastaa DNS eli Domain Name System, joka kääntää domain-nimet IP-osoitteiksi ja ohjaa liikenteen oikeaan paikkaan. Puhutaan DNS:stä kuitenkin myöhemmin.
+Tosielämässä meillä on myös navigaattoreita: laitteita, jotka osaavat muuttaa osoitteet GPS-koordinaateiksi ja sitten ohjata sinut oikeaan paikkaan. Internetissä navigaattoreita vastaa DNS eli Domain Name System, joka kääntää domain-nimet IP-osoitteiksi ja ohjaa liikenteen oikeaan paikkaan. Puhutaan DNS:stä joskus toiste.
 
 ## Nimen valinta
 
