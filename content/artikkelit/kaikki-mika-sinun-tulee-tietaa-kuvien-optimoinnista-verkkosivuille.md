@@ -11,15 +11,15 @@ Yksi helpoimmista tavoista tuhota verkkosivuston suorituskyky täydellisesti on 
 
 ## Millä tavoin väärin käytetyt kuvat haittaavat sivuston toimintaa?
 
-Keskimäärin kuvat muodostavat ylivoimaisesti suurimman osan verkkosivun koosta, ja mitä suurempi sivu on sitä kauemmin se latautuu. Kun sivun latausaika ylittää kolme sekuntia, hylkää 53% mobiilikäyttäjistä sivun. Jokainen viidensadan millisekunnin lisäys latausaikaan tarkoittaa, että käyttäjän kokema turhautumisen tunne lisäytyy 26%. Amazon ja Wallmart ovat havainneet, että jokainen 100ms joka latausajasta höylätään pois lisää verkkokaupan liikevaihtoa prosentilla. Esimerkiksi tavanomainen optimoimaton kännykkäkameralla napsaistu kuva voi olla hyvinkin 50x-100x suurempi kuin optimoitu versio. Googlen suosituksen mukaan [sivun optimaalinen koko on alle 1600 KiB](https://web.dev/total-byte-weight/).
+Keskimäärin kuvat muodostavat ylivoimaisesti suurimman osan verkkosivun koosta, ja mitä suurempi sivu on, sitä kauemmin se latautuu. Kun sivun latausaika ylittää kolme sekuntia, hylkää 53% mobiilikäyttäjistä sivun. Jokainen viidensadan millisekunnin lisäys latausaikaan tarkoittaa, että käyttäjän kokema turhautumisen tunne lisäytyy 26%. Amazon ja Walmart ovat havainneet, että jokainen karsittu 100 ms latausajasta lisää verkkokaupan liikevaihtoa prosentilla. Esimerkiksi tavanomainen optimoimaton kännykkäkameralla napsaistu kuva voi olla hyvinkin 50x-100x suurempi kuin optimoitu versio. Googlen suosituksen mukaan [sivun optimaalinen koko on alle 1600 KiB](https://web.dev/total-byte-weight/).
 
 StaticChargen valmistamat sivut osaavat optimoida kuvat automaattisesti. Optimointiin ei siis asiakkaanamme tarvitse käyttää itse aikaa eikä ole pelkoa siitä, että vahingossa ladattu suurikokoinen kuva hidastaisi sivustoa.
 
 ## Vektorigrafiikka ja rasterigrafiikka
 
-Tietokoneet ovat vakiintuneet tukemaan laajasti kahta tapaa näyttää kuvia. Ensimmäinen tapa on esittää kuva pieninä neliöinä, joita kutsumme pikseleiksi. Pikselien määrää kuvassa kutsutaan kuvan resoluutioksi tai kuvan kooksi (dimensions) ja se ilmoitetaan useimmiten muodossa _pikselien määrä leveyssuunnassa_  × _pikselien määrä korkeussuunnassa_ eli vaikkapa 1920×1080 pikseliä. Tämä kertolasku suorittamalla saadaan pikselien kokonaismäärä eli äskeisessä tapauksessa kuvan koon voisi myös ilmoittaa olevan noin kaksi miljoonaa pikseliä eli kaksi megapikseliä. Mitä suurempi resoluutio, sitä tarkempi kuva. Tätä lähestymistapaa kutsutaan _rasterigrafiikaksi_. Verkossa käytettäviä rasterigrafiikkaformaatteja ovat JPEG, PNG, GIF sekä WebP. Soveltuvia muokkaustyökaluja näille kuville ovat esimerkiksi Affinity Photo sekä Adobe Photoshop.
+Tietokoneet ovat vakiintuneet tukemaan laajasti kahta tapaa näyttää kuvia. Ensimmäinen tapa on esittää kuva pieninä neliöinä, joita kutsumme pikseleiksi. Pikselien määrää kuvassa kutsutaan kuvan resoluutioksi tai kuvan kooksi (dimensions) ja se ilmoitetaan useimmiten muodossa _pikselien määrä leveyssuunnassa_  × _pikselien määrä korkeussuunnassa_ eli vaikkapa 1920×1080 pikseliä. Tämä kertolasku suorittamalla saadaan pikselien kokonaismäärä eli äskeisessä tapauksessa kuvan koon voisi myös ilmoittaa olevan noin kaksi miljoonaa pikseliä eli kaksi megapikseliä. Mitä suurempi resoluutio, sitä tarkempi kuva. Tätä lähestymistapaa kutsutaan _rasterigrafiikaksi_. Verkossa käytettäviä rasterigrafiikkaformaatteja ovat JPEG, PNG, GIF ja WebP. Soveltuvia muokkaustyökaluja näille kuville ovat esimerkiksi Affinity Photo sekä Adobe Photoshop.
 
-Toinen tapa esittää kuvia on käyttää koordinaatistoa. Tietokoneelle voidaan kertoa esimerkiksi, että koordinaatiston pisteestä (0,0) alkaa kolmen pisteen levyinen jana jonka väri on valkoinen päättyen pisteeseen (1000, 1000). Lisäksi pisteessä (-18, -234) on sinisen suorakulmion vasen alakulma oikean yläkulman ollessa pisteessä (200, 200). Tätä lähestymistapaa kutsutaan vektorigrafiikaksi. Verkossa käytettäväksi vektorigrafiikkaformaatiksi on vakiintunut SVG. Soveltuvia muokkaustyökaluja näille kuville ovat esimerkiksi Affinity Designer sekä Adobe Illustrator.
+Toinen tapa esittää kuvia on käyttää koordinaatistoa. Tietokoneelle voidaan kertoa esimerkiksi, että koordinaatiston pisteestä (0,0) alkaa kolmen pisteen levyinen jana jonka väri on valkoinen päättyen pisteeseen (1000, 1000). Lisäksi pisteessä (-18, -234) on sinisen suorakulmion vasen alakulma oikean yläkulman ollessa pisteessä (200, 200). Tätä lähestymistapaa kutsutaan vektorigrafiikaksi. Verkossa käytettäväksi vektorigrafiikkaformaatiksi on vakiintunut SVG. Soveltuvia muokkaustyökaluja näille kuville ovat esimerkiksi Figma, Affinity Designer tai Adobe Illustrator.
 
 ### Määritelmät sikseen, mitä käytännön eroa näillä kahdella on?
 
@@ -27,13 +27,13 @@ Vektorigrafiikka
 1. vie useimmiten vähemmän tilaa ja
 2. skaalautuu paremmin kuin rasterigrafiikka.
 
-Vektorigrafiikkatiedostoihin tarvitsee tallentaa paljon vähemmän tietoa kuin rasterigrafiikkakuviin. Jos halutaan tallentaa, että kuvassa kulkee poikittain valkoinen jana jonka leveys on kolme pikseliä, voidaan vektorigrafiikkatiedostossa ilmoittaa vain janan leveys, väri, alkupiste ja loppupiste. Jos taas haluamme tallentaa tämän tiedon rasterigrafiikkamuodossa, meidän on määriteltävä kuvalle resoluutio, vaikkapa 1000×1000 pikseliä ja sitten tallentaa jokaisen pikselin väri ja läpinäkyvyys. Ja niitähän on tuon kokoisessa kuvassa miljoona. Mitä suurempi kuvasta halutaan, sitä todennäköisempää on, että kuvan vektoriversio on rasteriversiota pienempi.
+Vektorigrafiikkatiedostoihin tarvitsee tallentaa paljon vähemmän tietoa kuin rasterigrafiikkakuviin. Jos kuvaan halutaan piirtää poikittain valkoinen jana, jonka leveys on kolme pikseliä, voidaan vektorigrafiikkatiedostossa ilmoittaa vain janan leveys, väri, alkupiste ja loppupiste. Jos taas haluamme tallentaa tämän tiedon rasterigrafiikkamuodossa, meidän on määriteltävä kuvalle resoluutio, vaikkapa 1000×1000 pikseliä ja sitten tallentaa jokaisen pikselin väri ja mahdollisesti myös läpinäkyvyys. Ja niitähän on tuon kokoisessa kuvassa miljoona. Mitä suurempi kuvasta halutaan, sitä todennäköisempää on, että kuvan vektoriversio on rasteriversiota pienempi.
 
-Vektorigrafiikkakuvan koordinaatistoa ja siten kuvan kokoa voi skaalata rajattomasti ilman kuvan laadun heikkenemistä. Rasterigrafiikkakuvat sen sijaan muuttuvat nopeasti suttuisiksi, jos esimerkiksi kuva jonka resoluutio on 100×100 pikseliä yritetään skaalata tätä suurempaan kokoon.
+Vektorigrafiikkakuvan koordinaatistoa, ja siten kuvan kokoa, voi skaalata rajattomasti ilman kuvan laadun heikkenemistä. Rasterigrafiikkakuvat sen sijaan muuttuvat nopeasti huonolaatuisiksi, jos esimerkiksi kuva, jonka resoluutio on 100×100 pikseliä yritetään skaalata tätä suurempaan kokoon.
 
 ### Miksi rasterigrafiikkaa sitten edes käytetään, jos vektorigrafiikka on parempaa?
 
-Valitettavasti todellinen maailma ei koostu pelkistä geometrisistä muodoista joita voisimme vektorien keinoin kuvata. Kaikki valokuvat ovat aina rasterigrafiikkaa. Vektorigrafiikan käyttö rajoittuu lähinnä piirroskuvien (tosin myös hyvin yksityiskohtaisten sellaisten), logojen sekä tekstin esittämiseen. Tämän sivuston kaikki ikonit sekä esimerkiksi ylä- ja alapalkissa näkemäsi kuvat ovat vektorigrafiikkaa.
+Valitettavasti todellinen maailma ei koostu pelkistä geometrisistä muodoista, joita voisimme vektorien keinoin kuvata. Kaikki valokuvat ovat aina rasterigrafiikkaa. Vektorigrafiikan käyttö rajoittuu lähinnä piirroskuvien (tosin myös hyvin yksityiskohtaisten sellaisten), logojen ja tekstin esittämiseen. Tämän sivuston kaikki ikonit, kuten esimerkiksi ylä- ja alapalkissa näkemäsi kuvat, ovat vektorigrafiikkaa.
 
 ### Voiko rasteri- ja vektorigrafiikkaa muuttaa toisikseen?
 
@@ -47,7 +47,7 @@ Kyllä, kuvia voi muuttaa helposti toisikseen vaikkapa pikaisella Google-haulla 
 
 ### SVG
 
-SVG (Scalable Vector Graphics) on ollut käytössä vuodesta 2001 ja päivitetty viimeksi 2011. Sivulla olevat logot ja piirrokset tulisi parhaan lopputuloksen saamiseksi toimittaa sivuston toteuttajalle tässä muodossa. SVG-kuvat eivät käytä juurikaan tilaa, skaalautuvat täydellisesti ja lisäksi niitä pystyy animoimaan, kuten on tehty vaikkapa https://jere.pro -sivustolla ensimmäistä kertaa vierailtaessa. SVG tukee myös läpinäkyvyyttä. Jos SVG sisältää tekstiä, on se suositeltavaa muuttaa vektorigrafiikkaohjelmalla fonttiriippumattomaksi convert to curves-toiminnolla. Jos tämä jää tekemättä ja sivustovierailijan tietokoneella ei ole fonttia, jolla teksti on kirjoitettu, SVG-kuvan teksti näkyy Times New Romanina. SVG:t voivat sisältää myös rasterigrafiikkakuvia.
+SVG (Scalable Vector Graphics) on ollut käytössä vuodesta 2001 ja päivitetty viimeksi 2011. Sivulla olevat logot ja piirrokset tulisi parhaan lopputuloksen saamiseksi toimittaa sivuston toteuttajalle tässä muodossa. SVG-kuvat eivät käytä juurikaan tilaa, skaalautuvat täydellisesti ja lisäksi niitä pystyy animoimaan, kuten on tehty vaikkapa [https://jere.pro](https://jere.pro) -sivustolla ensimmäistä kertaa vierailtaessa. SVG tukee myös läpinäkyvyyttä. Jos SVG sisältää tekstiä, on se suositeltavaa muuttaa vektorigrafiikkaohjelmalla fonttiriippumattomaksi _convert to curves_ -toiminnolla. Jos tämä jää tekemättä ja sivustovierailijan tietokoneella ei ole fonttia, jolla teksti on kirjoitettu, SVG-kuvan teksti näkyy Times New Romanina. SVG:t voivat sisältää myös rasterigrafiikkakuvia.
 
 <br>
 <div class="row">
@@ -66,7 +66,7 @@ SVG (Scalable Vector Graphics) on ollut käytössä vuodesta 2001 ja päivitetty
 
 ### PDF
 
-Portable Document Format, kehittäjänä toimii Adobe. Alunperin julkaistu 1993. Toinen yleisesti käytössä oleva vektorigrafiikkaformaatti (voi sisältää myös rasterigrafiikkakuvia). Ei kuitenkaan yleisessä käytössä nimenomaisesti kuvien esittämiseen sivuilla, koska se on raskas verrattuna SVG:hen. PDF-tiedostoja on mahdollista upottaa verkkosivulle kuvina seuraavanlaisesti:
+PDF:n (Portable Document Format) kehittäjänä toimii Adobe ja se on alunperin julkaistu vuonna 1993. PDF on toinen yleisesti käytössä oleva vektorigrafiikkaformaatti ja sekin voi sisältää myös rasterigrafiikkakuvia. Ei kuitenkaan yleisessä käytössä nimenomaisesti kuvien esittämiseen sivuilla, koska se on raskas verrattuna SVG:hen. PDF-tiedostoja on mahdollista upottaa verkkosivulle kuvina seuraavanlaisesti:
 
 <figure>
 <pre>
@@ -76,10 +76,9 @@ Portable Document Format, kehittäjänä toimii Adobe. Alunperin julkaistu 1993.
 </pre>
 </figure>
 
-
 ### PNG
 
-PNG eli Portable Network Graphics julkaistiin alunperin 1996. Se tukee häviötöntä pakkausta ja läpinäkyvyyttä. PNG-kuvat soveltuvat parhaiten logon tai piirrosten näyttämiseen silloin kun SVG-versiota ei ole syystä tai toisesta saatavilla. Valokuvien esittämiseen se harvemmin soveltuu, koska PNG-kuvat vievät runsaasti tilaa. PNG-kuvan optimointi tarkoittaa lähinnä kuvan skaalaamista niin, ettei sivustolla esim käytetä kuvaa jonka resoluutio on vaikkapa 1000×1000 pikseliä silloin kuin kuvaa ei todellisuudessa esitetä sivulla koskaan sataa pikseliä leveämpänä. Internetistä löytyvät PNG-pakkaussivustot pienentävät kuvia myös esimerkiksi vähentämällä värien määrää.
+PNG (Portable Network Graphics) julkaistiin alunperin vuonna 1996. Se tukee häviötöntä pakkausta ja läpinäkyvyyttä. PNG-kuvat soveltuvat parhaiten logon tai piirrosten näyttämiseen silloin kun SVG-versiota ei ole syystä tai toisesta saatavilla. Valokuvien esittämiseen se harvemmin soveltuu, koska PNG-kuvat vievät runsaasti tilaa. PNG-kuvan optimointi tarkoittaa lähinnä kuvan skaalaamista niin, ettei sivustolla esimerkiksi käytetä kuvaa, jonka resoluutio on vaikkapa 1000×1000 pikseliä silloin kuin kuvaa ei todellisuudessa esitetä sivulla koskaan sataa pikseliä leveämpänä. Internetistä löytyvät PNG-pakkaussivustot pienentävät kuvia myös esimerkiksi vähentämällä värien määrää.
 
 <br>
 <div class="row">
@@ -87,7 +86,7 @@ PNG eli Portable Network Graphics julkaistiin alunperin 1996. Se tukee häviöt�
     <figure>
     <img src="/images/text-logo.svg" alt="StaticChargen logo">
     <figcaption>
-      Tässä on SVG-versio uudelleen, vertailun vuoksi. Se on sekä pienikokoisempi että terävämpi kuin viereiset png-kuvat.
+      Tässä on SVG-versio uudelleen, vertailun vuoksi. Se on sekä pienikokoisempi että terävämpi kuin viereiset PNG-kuvat.
     </figcaption>
     </figure>
     <br>
@@ -126,7 +125,7 @@ Microsoftin bittikarttaformaatti. Samankaltainen kuin PNG, mutta pakkaamaton eli
 
 ### JPEG
 
-Lyhenne termistä Joint Photographic Experts Group, joka oli standardin kehitelleen komitean nimi. Julkaistiin alunperin 1992. Häviöllistä pakkausta käyttävä rasterigrafiikkaformaatti, joka soveltuu valokuvien esittämiseen. Ei tue läpinäkyvyyttä. JPEG-kuvan kokoa on mahdollista kontrolloida yksinkertaisesti pakkausastetta säätämällä. Kuvaa voidaan useimmiten pienentää todella paljon niin, että laatu heikkenee vain vähän. Kuriositeettina JPEG-tiedoston tiedostopääte on useimmiten .jpg. Tämä on jäännös ajalta, jolloin Microsoft Windows osasi käsitellä vain kolmikirjaimisia tiedostopäätteitä. JPEG-kuvat tulee parhaan tuloksen saamiseksi skaalata samoin kuten PNG-kuvat, ja lisäksi on säädettävä kuvan pakkausaste sopivaksi. Mitä todennäköisimmin JPEG-kuvia ei tarvitse sivuilla esittää yli 85% laadulla.
+JPEG on lyhenne termistä Joint Photographic Experts Group, joka oli standardin kehitelleen komitean nimi. Julkaistiin alunperin 1992. Häviöllistä pakkausta käyttävä rasterigrafiikkaformaatti, joka soveltuu valokuvien esittämiseen. Ei tue läpinäkyvyyttä. JPEG-kuvan kokoa on mahdollista kontrolloida yksinkertaisesti pakkausastetta säätämällä. Kuvaa voidaan useimmiten pienentää todella paljon niin, että laatu heikkenee vain vähän. Kuriositeettina JPEG-tiedoston tiedostopääte on useimmiten .jpg. Tämä on jäännös ajalta, jolloin Microsoft Windows osasi käsitellä vain kolmikirjaimisia tiedostopäätteitä. JPEG-kuvat tulee parhaan tuloksen saamiseksi skaalata samoin kuten PNG-kuvat, ja lisäksi on säädettävä kuvan pakkausaste sopivaksi. Mitä todennäköisimmin JPEG-kuvia ei tarvitse sivuilla esittää yli 85% laadulla.
 
 Alla olevan esimerkkikuvan alkuperäinen resoluutio on 4032×3024 ja koko 2279 KiB.
 
@@ -222,7 +221,8 @@ GIF-formaattia ei tule missään tapauksessa käyttää animoitujen kuvien esitt
 <br>
 
 ### WebP
-Julkaistiin alunperin 2010 PNG-, JPEG- ja GIF-kuvien korvaajaksi. Tämä Googlen kehittämä formaatti tukee häviöllistä ja häviötöntä pakkausta, läpinäkyvyyttä sekä animaatioita (mutta video vie silti vähemmän tilaa). WebP-kuvat ovat JPEG- ja PNG-kuvia 20%-35% pienempiä. Kun tuki Safarille saatiin syksyllä 2020, tukevat kaikki merkittävät selaimet nyt WebP-standardia. Maailmassa on kuitenkin sen verran runsaasti WebP-standardia tukemattomia vanhoja selaimia, että sen lisäksi sivustolla on suositeltavaa käyttää ns. fallbackina jotain tavanomaisempaa kuvatyyppiä. Tulevaisuudessa etenevissä määrin käytössä.
+
+Julkaistiin alunperin 2010 PNG-, JPEG- ja GIF-kuvien korvaajaksi. Tämä Googlen kehittämä formaatti tukee häviöllistä ja häviötöntä pakkausta, läpinäkyvyyttä ja animaatioita (mutta video vie silti vähemmän tilaa). WebP-kuvat ovat JPEG- ja PNG-kuvia 20%-35% pienempiä. Kun tuki Safarille saatiin syksyllä 2020, tukevat kaikki merkittävät selaimet nyt WebP-standardia. Maailmassa on kuitenkin sen verran runsaasti WebP-standardia tukemattomia vanhoja selaimia, että sen lisäksi sivustolla on suositeltavaa käyttää ns. fallbackina jotain tavanomaisempaa kuvaformaattia. WebP on kuitenkin tulevaisuudessa etenevissä määrin käytössä.
 
 <br>
 <div class="row">
@@ -265,7 +265,7 @@ Julkaistiin alunperin 2010 PNG-, JPEG- ja GIF-kuvien korvaajaksi. Tämä Googlen
 
 ### APNG
 
-Animated PNG. Kehitetty nimensä mukaisesti animoitujen kuvien esittämiseen. Toisin kuin GIF-kuvat, APNG-kuvat tukevat läpinäkyvyyttä (ja lisäksi tiedostokoko on pienempi kuin GIF-kuvissa). Laaja selaintuki vuodesta 2017. Ei kuitenkaan kovin yleisessä käytössä. Saavuttaa lyhytvideoissa vielä WebP:täkin pienempiä tiedostokokoja, mutta videot ovat vielä paljon pienempiä.
+Animated PNG. Kehitetty nimensä mukaisesti animoitujen kuvien esittämiseen. Toisin kuin GIF-kuvat, APNG-kuvat tukevat läpinäkyvyyttä (ja lisäksi tiedostokoko on pienempi kuin GIF-kuvissa). Laaja selaintuki vuodesta 2017. Ei kuitenkaan kovin yleisessä käytössä. Saavuttaa lyhytvideoissa vielä WebP:täkin pienempiä tiedostokokoja, mutta videot ovat vieläkin pienempiä.
 
 ### AVIF
 
@@ -288,7 +288,7 @@ Javascriptin avulla kuvat on mahdollista ladata vasta silloin, kun käyttäjä s
 
 ## Responsiiviset kuvat
 
-Oletetaan, että käyttäjä tulee sivuille puhelimella. Tällöin ei ole mitään järkeä näyttää käyttäjälle isolle tietokoneen näytölle suunniteltua kuvaa. Toisaalta jos käyttäjä tulee sivustolle tietokoneella, ei hänelle voi myöskään pientä puhelimelle suunniteltua kuvaa, koska se näyttää suttuiselta. Lisäksi tulee ottaa huomioon näytön pikselitiheys, joka saattaa olla puhelimilla hyvinkin suuri. Onneksi srcset-attribuuttia käytämällä selain osaa ladata useista vaihtoehdoista sopivan kokoisen kuvan. Tällä tavoin on mahdollista pienentää latausaikoja huomattavasti. Kuvia ei kuitenkaan kannata skaalata käsin, vaan se kannattaa jättää sivuston ohjelmiston tehtäväksi. &lt;picture&gt;-elementti taas on tarkoitettu kokonaan eri kuvan näyttämiseen käyttäjälle kontekstista riippuen. Selain voi esimerkiksi näyttää puhelimella kissan, tabletilla koiran ja tietokoneella lehmän. Käytännössä tämä on kuitenkin hyödyllisintä silloin, kun kuvan tavoiteltu rajaus leveällä näytöllä on huomattavan erilainen kuin rajaus kapealla näytöllä. Otetaan esimerkiksi tilanne, jossa näytöllä on leveä banneri jossa on maisema ja oikeassa reunassa on ihminen. Leveällä näytöllä se toimii hyvin, mutta kapealla näytöllä saattaa käydä niin että ihminen rajautuu kokonaan pois kuvasta.  &lt;picture&gt;-elementin avulla kuvasta on mahdollista näyttää tietokoneella leveä versio ja puhelimella toinen versio, jossa ihminen on rajattu kuvan keskelle ja varmasti näkyvillä.
+Oletetaan, että käyttäjä tulee sivuille puhelimella. Tällöin ei ole mitään järkeä näyttää käyttäjälle isolle tietokoneen näytölle suunniteltua kuvaa. Toisaalta, jos käyttäjä tulee sivustolle tietokoneella, ei hänelle voi myöskään pientä puhelimelle suunniteltua kuvaa, koska se näyttää suttuiselta. Lisäksi tulee ottaa huomioon näytön pikselitiheys, joka saattaa olla puhelimilla hyvinkin suuri. Onneksi srcset-attribuuttia käyttämällä selain osaa ladata useista vaihtoehdoista sopivan kokoisen kuvan. Tällä tavoin on mahdollista pienentää latausaikoja huomattavasti. Kuvia ei kuitenkaan kannata skaalata käsin, vaan se kannattaa jättää sivuston ohjelmiston tehtäväksi. &lt;picture&gt;-elementti taas on tarkoitettu kokonaan eri kuvan näyttämiseen käyttäjälle kontekstista riippuen. Selain voi esimerkiksi näyttää puhelimella kissan, tabletilla koiran ja tietokoneella lehmän. Käytännössä tämä on kuitenkin hyödyllisintä silloin, kun kuvan tavoiteltu rajaus leveällä näytöllä on huomattavan erilainen kuin rajaus kapealla näytöllä. Otetaan esimerkiksi tilanne, jossa näytöllä on leveä banneri jossa on maisema ja oikeassa reunassa on ihminen. Leveällä näytöllä se toimii hyvin, mutta kapealla näytöllä saattaa käydä niin että ihminen rajautuu kokonaan pois kuvasta.  &lt;picture&gt;-elementin avulla kuvasta on mahdollista näyttää tietokoneella leveä versio ja puhelimella toinen versio, jossa ihminen on rajattu kuvan keskelle ja varmasti näkyvillä.
 
 <figure>
     <pre>
